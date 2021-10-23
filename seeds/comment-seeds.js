@@ -12,7 +12,7 @@ const commentData = [
         post_id: 1
     },
     {
-        comment_text: "Excellent form Michael.",
+        comment_text: "My cousin Moes never knows where he's going. But he turned out okay.",
         user_id: 1,
         post_id: 1
     },
