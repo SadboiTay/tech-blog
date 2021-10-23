@@ -4,7 +4,8 @@
   "description": "A solo built, full stack application where users can view and create tech blog posts.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node seeds/index.js"
   },
   "repository": {
     "type": "git",
