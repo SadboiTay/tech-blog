@@ -1,0 +1,15 @@
+{{#each posts as |post|}}
+<article class="post-card">
+    <div class="post-header">
+        <h2 class="post-title">
+            {{post.title}}
+        </h2>
+        <div class="post-meta">
+            Posted by <strong>{{post.user.username}}</strong> on {{created_at}}
+        </div>
+    </div>
+    <div class="post-body">
+        {{post.post_content}}
+    </div>
+</article>
+{{/each}}
