@@ -18,10 +18,10 @@
                 </li>
                 {{#if loggedIn}}
                 <li>
-                    <a href="#">Dashboard</a>
+                    <a href="/dashboard">Dashboard</a>
                 </li>
                 <li>
-                    <a href="#">Log Out</a>
+                    <a id="logout">Log Out</a>
                 </li>
                 {{else}}
                 <li>
@@ -43,9 +43,14 @@
     <main>
         {{{ body }}}
     </main>
+
     <footer>
         Copyright Taylor Hakes
     </footer>
+
+    {{#if loggedIn}}
+    <script src="/javascript/logout.js"></script>
+    {{/if}}
 </body>
 
 </html>
