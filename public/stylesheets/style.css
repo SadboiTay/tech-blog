@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -87,35 +88,40 @@ main {
     list-style: none;
 }
 
-.post-card {
+.card {
     border: 5px solid var(--color1);
     margin-top: 20px;
     border-radius: 5px;
-    overflow: hidden;
+    width: 100%;
+    /* overflow: hidden; */
 }
 
-.post-header {
+.card-header {
     color: rgb(151, 151, 151);
     background-color: var(--color1);
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    height: 65px;
-    width: 100%;
+    justify-content: space-between;
+    min-height: 65px;
 }
 
-.post-header a {
+.card-header a {
     text-decoration: none;
     color: inherit;
 }
 
-.post-header a:hover {
+.card-header a:hover {
     color: white;
 }
 
-.post-body {
+.card-body {
     padding: 20px;
+}
+
+.card-footer {
+    padding: 0px 20px 10px 20px;
+    font-size: 14px;
 }
 
 .comments {
@@ -143,6 +149,49 @@ main {
 .meta span {
     color: black;
     font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 3px; 
+    font-size: 22px;
+}
+
+#email-login {
+    margin-bottom: 20px;
+}
+
+#email-signup {
+    margin-bottom: 20px;
+}
+
+#username-signup {
+    margin-bottom: 20px;
+}
+
+input {
+    border-style: none;
+    width: 100%;
+    padding: 10px 20px;
+    min-height: 35px;
+    font-family: sans-serif;
+    font-size: 22px;
+}
+
+input text {
+    padding-left: 10px;
+}
+
+button {
+    padding: 10px 0;
+    width: 100%;
+    margin-top: 10px;
+    border-style: none;
+    border-radius: 5px;
+    background-color: rgb(105, 105, 105);
+    font-size: 22px;
+    font-family: sans-serif;
+    color: white;
 }
 
 footer {
@@ -187,7 +236,7 @@ footer {
         display: none;
     }
 
-    .post-header {
+    .card-header {
         color: rgb(151, 151, 151);
         background-color: var(--color1);
         padding: 10px 20px;
@@ -195,7 +244,6 @@ footer {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        height:35px;
-        width: 100%;
+        min-height: 35px;
     }
 }
