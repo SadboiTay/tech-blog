@@ -88,7 +88,7 @@ router.get('/edit/:id', (req, res) => {
 });
 
 router.get('/newpost', (req, res) => {
-    res.render('newpost');
+    res.render('newpost', { loggedIn: true });
 })
 
 module.exports = router;
