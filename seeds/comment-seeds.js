@@ -37,7 +37,7 @@ const commentData = [
         post_id: 3
     },
     {
-        comment_text: "You're beautiful. But I'm not implying that you're ordinary or aynthing! Ok um bye now.",
+        comment_text: "You're beautiful. But I'm not implying that you're ordinary or anything! Ok um bye now.",
         user_id: 2,
         post_id: 4
     },

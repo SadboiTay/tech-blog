@@ -24,6 +24,10 @@ header {
     align-items: center;
 }
 
+header a {
+    text-decoration: none;
+}
+
 nav {
     position: absolute;
     top: 0;
@@ -52,6 +56,10 @@ nav li a {
     text-decoration: none;
     color: var(--color2);
     font-size: 20px;
+}
+
+nav li a:hover::before {
+    content: '> ';
 }
 
 .jumbo-title {
@@ -110,6 +118,33 @@ main {
     padding: 20px;
 }
 
+.comments {
+    margin-top: 40px;
+}
+
+.comment {
+    margin: 10px 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.comment:nth-child(odd) {
+    background-color: #c6d8bf;
+}
+
+.text {
+    margin: 5px 10px;
+}
+
+.meta {
+    color: gray;
+}
+
+.meta span {
+    color: black;
+    font-weight: bold;
+}
+
 footer {
     display: flex;
     justify-content: center;
@@ -118,7 +153,6 @@ footer {
 
 @media screen and (min-width:  768px) {
     header {
-        background-color: var(--color1);
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -140,12 +174,13 @@ footer {
     nav ul {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: initial;
         width: 100%;
     }
 
     nav ul li a {
         font-size: 28px;
+        margin-right: 50px;
     }
 
     .menu-btn {
