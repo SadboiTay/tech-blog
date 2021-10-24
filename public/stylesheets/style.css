@@ -75,6 +75,10 @@ main {
     margin: 0 auto;
 }
 
+.post-list {
+    list-style: none;
+}
+
 .post-card {
     border: 5px solid var(--color1);
     margin-top: 20px;
@@ -91,6 +95,15 @@ main {
     justify-content: space-around;
     height: 65px;
     width: 100%;
+}
+
+.post-header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.post-header a:hover {
+    color: white;
 }
 
 .post-body {
@@ -137,5 +150,17 @@ footer {
 
     .menu-btn {
         display: none;
+    }
+
+    .post-header {
+        color: rgb(151, 151, 151);
+        background-color: var(--color1);
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height:35px;
+        width: 100%;
     }
 }
