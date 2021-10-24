@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                {{#if loggedIn}}
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Log Out</a>
+                </li>
+                {{else}}
+                <li>
+                    <a href="#">Log In</a>
+                </li>
+                {{/if}}
+            </ul>
+        </nav>
+
+        <h1 class="jumbo-title">The Tech Blog</h1>
+    </header>
+
+    <main>
+        {{{ body }}}
+    </main>
+    <footer>
+        Copyright Taylor Hakes
+    </footer>
+</body>
+
+</html>
