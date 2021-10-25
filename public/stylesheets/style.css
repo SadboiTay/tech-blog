@@ -113,6 +113,34 @@ nav li a:hover::before {
     transition: all .5s ease-in-out;
 }
 
+#welcome-header {
+    background-color: var(--color2);
+}
+
+#welcome-title {
+    color: var(--color1);
+}
+
+.login-prompt {
+    display: flex;
+    justify-content: center;
+    border: 2px solid var(--color1);
+    margin-top: 20px;
+    border-radius: 5px;
+    width: 100%;
+    padding: 5px;
+}
+
+.login-prompt div a {
+    text-decoration: none;
+    color: var(--color1);
+}
+
+.login-prompt div a:hover {
+    text-decoration: none;
+    color: var(--color3);
+}
+
 main {
     width: 90%;
     margin: 0 auto;
@@ -127,7 +155,6 @@ main {
     margin-top: 20px;
     border-radius: 5px;
     width: 100%;
-    /* overflow: hidden; */
 }
 
 .card-header {

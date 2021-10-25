@@ -41,6 +41,16 @@
     </header>
 
     <main>
+        {{#if loggedIn}}
+        {{else}}
+        <div id="welcome-card" class="card">
+            <div id="welcome-header" class="card-header">
+                <div id="welcome-title" class="card-title">
+                    <h2>Welcome to the Tech Blog! Head over to the "Log In" menu to create an account and join the buzz! -DevTay</h2>
+                </div>
+            </div>
+        </div>
+        {{/if}}
         {{{ body }}}
     </main>
 
