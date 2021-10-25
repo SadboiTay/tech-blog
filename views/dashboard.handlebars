@@ -18,7 +18,9 @@
                         </h2>
                     </a>
                     <div class="card-meta">
-                        Posted by <strong>{{user.username}}</strong> on {{created_at}}
+                        Posted by <strong>{{user.username}}</strong> on {{format_date created_at}}
+                        |
+                        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
                     </div>
                 </div>
                 <div class="card-body">
