@@ -7,6 +7,7 @@
 :root {
     --color1: #231010;
     --color2: #D9EAD3;
+    --color3: rgb(161, 161, 161)
 }
 
 a {
@@ -110,7 +111,7 @@ main {
 }
 
 .card-header {
-    color: rgb(151, 151, 151);
+    color: var(--color3);
     background-color: var(--color1);
     padding: 10px 20px;
     display: flex;
@@ -120,6 +121,7 @@ main {
 }
 
 .card-header a {
+    color: var(--color2);
     text-decoration: none;
     color: inherit;
 }
@@ -170,25 +172,25 @@ label {
     font-size: 22px;
 }
 
-#email-login {
-    margin-bottom: 20px;
+#comment-area {
+    margin-top: 15px;
 }
 
-#email-signup {
-    margin-bottom: 20px;
-}
-
-#username-signup {
-    margin-bottom: 20px;
-}
-
-#post-title {
+#email-login,
+#edit-title,
+#email-signup,
+#username-signup,
+#post-title,
+#post-content {
     margin-bottom: 20px;
 }
 
 #post-content {
-    margin-bottom: 20px;
     min-height: 80px;
+}
+
+.delete-post-btn {
+    color: darkred;
 }
 
 input {
@@ -248,6 +250,10 @@ button {
     color: white;
 }
 
+.edit-icon {
+    width: 25px;
+}
+
 footer {
     display: flex;
     justify-content: center;
@@ -291,8 +297,6 @@ footer {
     }
 
     .card-header {
-        color: rgb(151, 151, 151);
-        background-color: var(--color1);
         padding: 10px 20px;
         display: flex;
         flex-direction: row;

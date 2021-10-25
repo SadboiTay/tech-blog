@@ -1,5 +1,7 @@
 <div class="new-post-btn">
-    <a href="/dashboard/newpost"><h2 id="new-post-btn">+ New Post</h2></a>
+    <a href="/dashboard/newpost">
+        <h2 id="new-post-btn">+ New Post</h2>
+    </a>
 </div>
 
 {{#if posts.length}}
@@ -8,8 +10,26 @@
     <ol>
         {{#each posts as |post|}}
         <li>
-            {{> post-info post}}
-            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+            <article class="card">
+                <div class="card-header">
+                    <a href="/post/{{id}}">
+                        <h2 class="card-title">
+                            {{title}}
+                        </h2>
+                    </a>
+                    <div class="card-meta">
+                        Posted by <strong>{{user.username}}</strong> on {{created_at}}
+                    </div>
+                </div>
+                <div class="card-body">
+                    {{post_content}}
+                </div>
+                <div class="card-footer">
+                    <a href="/dashboard/edit/{{post.id}}" class="edit-link">
+                        <img class="edit-icon" src="/images/edit.png" alt="">
+                    </a>
+                </div>
+            </article>
         </li>
         {{/each}}
     </ol>
