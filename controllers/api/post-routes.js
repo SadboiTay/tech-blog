@@ -1,7 +1,6 @@
 const router = require('express').Router();
-const sequelize = require('../../config/connection');
 const { Post, User, Comment } = require('../../models');
-// const withAuth = require('../../utils/auth');
+const withAuth = require('../../utils/auth');
 
 // get all users
 router.get('/', (req, res) => {
@@ -75,7 +74,7 @@ router.get('/:id', (req, res) => {
         });
 });
 
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
     console.log('======================');
     // expects {title: 'I love cookies!', post_content: 'I've been thinking lately about how much I love cookies', user_id: 1}
     Post.create({
@@ -90,7 +89,7 @@ router.post('/', (req, res) => {
         });
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
     console.log('======================');
     Post.update(req.body, {
             where: {
@@ -111,7 +110,7 @@ router.put('/:id', (req, res) => {
         });
 });
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', withAuth, (req, res) => {
     console.log('======================');
     Post.destroy({
         where: {
