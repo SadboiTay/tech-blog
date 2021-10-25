@@ -2,13 +2,16 @@
 <article>
     <div class="card">
         <div class="card-header">
-            <h2>
+            <h2 class="card-title">
                 Edit Post
             </h2>
-            <div>
-                Posted by you on {{post.created_at}}
-                |
-                <a href="/post/{{post.id}}">{{post.comments.length}} comments</a>
+            <div class="card-meta">
+                <div>
+                    Posted by <strong>{{post.user.username}}</strong> on {{format_date post.created_at}}
+                </div>
+                <div>
+                    <a href="/post/{{id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+                </div>
             </div>
         </div>
         <div class="card-body">
@@ -29,7 +32,8 @@
 
 <form class="comment-form">
     <div>
-        <textarea id="comment-area" name="comment-body" placeholder="Enter comment here...">Enter comment here...</textarea>
+        <textarea id="comment-area" name="comment-body"
+            placeholder="Enter comment here...">Enter comment here...</textarea>
     </div>
 
     <div>
