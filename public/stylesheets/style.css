@@ -393,4 +393,14 @@ footer {
         flex-direction: column;
         align-items: flex-end;
     }
+
+    #welcome-card {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    
+    .login-prompt {
+        max-width: 600px;
+        margin: 15px auto;
+    }
 }
