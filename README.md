@@ -8,7 +8,6 @@
   * [Website](#Website)
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Contributing](#contributing)
   * [Tests](#tests)
   * [Built With](#built-with)
   * [Questions](#questions)
